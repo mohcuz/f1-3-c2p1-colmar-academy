@@ -1,0 +1,659 @@
+@font-face {
+font-family: 'Libre Baskerville';
+font-style: italic;
+font-weight: 400;
+src: local('Libre Baskerville Italic'), local('LibreBaskerville-Italic'), url(https://fonts.gstatic.com/s/librebaskerville/v5/QHIOz1iKF3bIEzRdDFaf5eUHi-3yDrzgLLsrfaKVF9k.woff2) format('woff2');
+unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;}
+
+@font-face {
+font-family: "Libre Baskerville";
+font-style: normal;
+font-weight: 400;
+src: local('Libre Baskerville'), local('LibreBaskerville-Regular'), url(https://fonts.gstatic.com/s/librebaskerville/v5/pR0sBQVcY0JZc_ciXjFsK6Ucnt8gjcHpqyffjHeZWDA.woff2) format('woff2');
+unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;}
+
+@font-face {
+font-family: 'Libre Baskerville';
+font-style: normal;
+font-weight: 700;
+src: local('Libre Baskerville Bold'), local('LibreBaskerville-Bold'), url(https://fonts.gstatic.com/s/librebaskerville/v5/kH7K4InNTm7mmOXXjrA5v6y7YSlLHrWsjpD3RcrnyFM.woff2) format('woff2');
+unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;}
+
+html {
+font-size: 16px;
+}
+
+body  {
+font-family: "Libre Baskerville", Arial, sans-serif;
+background-color: #c2d1ef;
+color: #15171c;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+h1 {
+font-weight: 700;
+font-family: "Libre Baskerville", sans-serif;
+font-size: 2.5rem;
+color: #333338;
+}
+
+h3  {
+font-weight: 400;
+font-family: "Libre Baskerville", sans-serif;
+font-size: 1.2rem;
+color: #818287;
+}
+
+p {
+font-family: "Libre Baskerville", sans-serif;
+font-weight: 400;
+color: inherit;
+}
+
+ /*Header Desktop*/
+.header-desktop {
+display: flex;
+position: fixed;
+z-index: 1;
+background-color: #ffffff;
+width: 100%;
+height: 4rem;
+align-items: center;
+justify-content: space-between;
+top: 0;
+left: 0;
+}
+
+.logo {
+display: flex;
+justify-content: flex-end;
+height: 2rem;
+margin-left: 1.5rem;
+font-size: 1.3rem;
+align-items: center;
+}
+
+.logo img {
+width: auto;
+}
+
+#colmar {
+font-weight: 700;
+}
+
+#academy {
+font-weight: 400;
+color: #c2c8ce;
+}
+
+.header-desktop .menu {
+margin: 0 1.5rem;
+}
+
+.menu a {
+margin-left: 1rem;
+}
+
+.menu a:hover {
+background-color: #333338;
+height: 4rem;
+color: #fcfdff;
+}
+
+ /*Header Mobile*/
+.header-mobile {
+display: none;
+position: fixed;
+z-index: 1;
+background-color: #ffffff;
+width: 100%;
+height: 4rem;
+align-items: center;
+justify-content: space-around;
+padding-bottom: : 0;
+}
+
+.header-mobile .mobile {
+display: none;
+width: 25%;
+text-align: center;
+z-index: 100;
+}
+
+.header-mobile {
+padding: 5px;
+top: .01rem;
+}
+
+@media only screen and (max-width: 480px)
+{
+
+.header-desktop {
+display: none;
+}
+
+.header-mobile{
+display: flex;
+}
+
+#colmar, #academy{
+display: none;
+}
+
+.header-mobile .mobile{
+display: block;
+}
+}
+
+/*Hero Banner*/
+.hero {
+display: flex;
+width: 100%;
+height: auto;
+position: relative;
+justify-content: flex-start;
+align-items: center;
+margin: 4rem 2rem auto auto;
+}
+
+.hero-img {
+display: block;
+width: 60%;
+height: auto;
+padding: 2rem 2rem;
+position: relative;
+overflow: hidden;
+}
+
+.hero img {
+width: 100%;
+height: auto;
+}
+
+.hero .hero-image img {
+margin: 2rem;
+}
+
+.hero-text {
+display: block;
+position: relative;
+width: 30%;
+line-height: 1.2;
+margin-left: 1.5rem;
+}
+
+.hero-text .button{
+display: block;
+position: relative;
+background-color: #f79b1b;
+color:#333338;
+max-width: auto;
+margin: 0.8rem 0;
+text-align: center;
+border-radius: 4px;
+font-weight: 700;
+padding: 8px;
+}
+
+.hero-text .button:hover{
+color: #333338;
+border: 2px solid #f79b1b;
+background-color: #eeeeee;
+}
+
+/*Hero banner Mobile*/
+@media only screen and (max-width: 480px) {
+.hero{flex-direction: column;
+justify-content: center;
+}
+
+.hero-img {
+width: 100%;
+height: auto;
+padding: 0;
+}
+
+.hero-text{
+display: block;
+width: 100%;
+height: auto;
+padding: 2rem 1rem;
+margin: 0 auto;
+justify-content: flex-start;
+}
+
+.hero-text .button{
+width: auto;
+margin: 1rem ;
+margin-right: 2rem;}
+}
+
+/*Second banner*/
+
+.info {
+display: flex;
+width: 100%;
+height: auto;
+position: relative;
+justify-content: flex-start;
+align-items: center;
+margin:  auto auto 2rem auto;
+background-color: #efeeed;
+}
+
+.info-main {
+display: block;
+position: relative;
+width: 60%;
+height: auto;
+overflow: hidden;
+top: 1.3rem;
+margin: 1.5rem;
+}
+
+.info-main img{
+width: 100%;
+height: auto;
+}
+
+.info-text {
+display: block;
+position: relative;
+padding: 2rem 0;
+line-height: 1.5;
+width: auto;
+height: auto;
+}
+
+.info-text p {
+margin: 1.5rem auto;
+}
+
+#author {font-size: .75rem;
+margin-top: margin-top: 4rem;
+}
+
+.info-cards{
+display: flex;
+position: relative;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+align-content: center;
+width: 35%;
+height: auto;
+margin: 1rem auto;
+}
+
+.card a{display: flex;
+position: relative;
+flex-direction: row;
+align-content: space-around;
+width: 100%;
+height: 200px;
+padding: 0;
+justify-content: flex-start;
+float: left;
+border: 1px solid #c2d1ef;
+align-items: stretch;
+margin: .75rem auto;
+}
+
+.card .img-desktop {
+width:35%;
+height: auto;
+display: block;
+position: relative;
+float: left;
+padding: 1rem 1rem;
+}
+
+.card .text {
+align-items: center;
+display: block;
+width: auto;
+height: auto;
+position: relative;
+margin: 2rem 0;
+flex-wrap: wrap;
+}
+
+.card a:hover {
+background-color: #c2d1ef;
+width: auto;
+}
+
+.card .text p {
+margin: 1.5rem auto ;
+}
+
+#cta {
+color: #f79b1b;
+}
+
+/*Second banner Mobile*/
+.img-mobile {
+display: none;
+position: relative;
+margin: 0 auto;
+width: 100%;
+height: auto;
+overflow: hidden;
+}
+
+@media only screen and (max-width: 480px) {
+.info-cards {
+width: 100%;
+height: 550px;
+flex-direction: column;
+border-bottom: 1px solid #c2d1ef
+}
+
+.info-cards .text {
+width: 100%;
+height: auto;
+margin: 1rem;
+}
+
+.info-main, .info-cards .img-desktop {
+display: none;
+}
+
+.info-cards .img-mobile {
+display: block;
+}
+
+.card {
+display: block;
+overflow: hidden;
+margin: auto 0;
+border-bottom: 0px;
+}
+
+.card h3 {
+margin-top: 0;
+margin-bottom: 0.25rem;
+}
+
+.card p {
+margin: 0.5rem 0;
+line-height: 1.3;
+}
+
+#cta {
+visibility: visible;
+font-size: 1.25rem;
+margin-top: 0.5rem;
+margin-bottom: 1rem;
+}
+}
+
+/*Curriculum*/
+.curriculum {
+display: flex;
+background-color: #c2d1ef;
+justify-content: center;
+align-items: flex-start;
+flex-wrap: wrap;
+padding-bottom: 2rem;
+}
+
+.curriculum-title {
+display: block;
+position: relative;
+width: 100%;
+text-align: center;
+padding: 0 0 1rem 0;
+}
+
+.curriculum-cards {
+display: flex;
+justify-content: center;
+align-items: flex-start;
+width: 100%;
+height: auto;
+flex-wrap: wrap;
+}
+
+.course:hover{
+border: 3px solid #f79b1b
+}
+
+.course{
+display:inline-block;
+width: 25%;
+height: auto;
+background-color: #efeeed;
+margin: 1rem;
+}
+
+.course img {
+display: block;
+width: 100%;
+height: auto;
+}
+
+.course-text {
+display: inline-block;
+margin: 1rem 1rem 1.5rem 1.5rem;
+min-height: 135px;
+flex-wrap: wrap;
+line-height: 1.3;
+}
+
+.course-text h5{
+margin: 1rem auto;
+}
+
+/*Curriculum Mobile*/
+
+@media only screen and (max-width: 480px){
+.course img, .course-text h5, .course-text p {
+display:none;
+}
+
+.curriculum-cards {
+flex-direction: column;
+justify-content: center;
+}
+
+.course {
+display: block;
+width: 90%;
+margin: 0.25rem 1rem;
+background-color: #f79b1b;
+}
+
+.course-text {
+min-height: auto;
+width: auto;
+}
+
+.course-text h3{
+width: 100%;
+text-align: center;
+}
+}
+
+/* Thesis */
+
+.thesis {
+display: flex;
+width: 100%;
+max-height: auto;
+position: relative;
+justify-content: flex-start;
+align-items: flex-start;
+background-color: #efeeed;
+border-bottom: 1px solid #c2d1ef;
+padding-top: 2rem;
+flex-wrap: wrap;
+}
+
+.thesis-main {
+display: block;
+position: relative;
+width: 60%;
+height: auto;
+overflow: hidden;
+top: -1.5rem;
+margin: auto 1.5rem;
+}
+
+
+.thesis-title {
+display: block;
+position: relative;
+width: 100%;
+text-align: center;
+padding: 2.5rem 0 1rem 0;
+}
+
+
+.thesis-video{
+display: block;
+position: relative;
+overflow: hidden;
+width: 100%;
+height: auto;
+justify-content: center;
+}
+
+.thesis-video video{
+width: 100%
+}
+
+.video-description {
+display: block;
+position: relative;
+line-height: 1.5;
+width: 100%;
+height: auto;
+padding: 1.5rem 0;
+flex-wrap: wrap;
+overflow: hidden;
+}
+
+.video-description p{
+margin-top:  1rem ;
+}
+
+/* Thesis Features and Cards*/
+
+.thesis-features{
+display: flex;
+position: relative;
+flex-direction: column;
+justify-content: space-between;
+align-items: baseline;
+align-content: center;
+width: 35%;
+height: 100%;
+float: left;
+margin-top: 3rem;
+}
+
+.thesis-card a{
+display: flex;
+position: relative;
+flex-direction: row;
+align-content: space-around;
+width: 100%;
+height: 200px;
+padding: 0;
+justify-content: flex-start;
+float: left;
+border: 1px solid #c2d1ef;
+align-items: center;
+margin-top: 1.5rem;
+}
+
+.thesis-card a:hover{
+background-color:#c2d1ef;
+}
+
+.thesis-card img {
+width:35%;
+height: auto;thesis-card
+display: block;
+position: relative;
+float: left;
+padding: 1rem 1rem;
+}
+
+.thesis-text {
+align-items: center;
+display: block;
+width: auto;
+height: auto;
+position: relative;
+margin: 2rem 0;
+flex-wrap: wrap;
+line-height: 1;
+}
+
+.thesis-text p {
+margin: 1rem auto;
+line-height: 1.3;
+}
+
+
+/* Thesis Mobile*/
+
+@media only screen and (max-width: 480px) {
+.thesis-text, .thesis-card, .video-description {
+display: none;
+}
+
+.thesis {
+width: 100%;
+padding-bottom: -2rem;
+}
+
+.thesis-video {
+width: 100%;
+padding: 0;
+border: 1px solid #c2d1ef;
+}
+
+.thesis-video video {
+width: 100%;
+height: auto;
+}
+
+.thesis-title {
+width: 100%
+}
+
+.thesis-main{
+width:100%;
+margin: -1rem 1rem -2rem 1rem;
+}
+}
+
+/*Footer*/
+footer {
+padding: 1.5rem 1.5rem 2rem 1.5rem;
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+font-size: 0.80rem;
+}
+
+footer .links a {
+padding: 0 0.5rem;
+}
+
+footer .links a:hover {
+font-weight: 700;
+}
+
+/*footer mobile*/
+@media only screen and (max-width: 480px) {
+.links {display: none;
+}
+}
